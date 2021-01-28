@@ -1,42 +1,41 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./style/style.css";
 
 const NavBar = () => {
   const [Burger, setBurger] = useState(false);
   const [Width, setWidth] = useState(window.innerWidth);
+  console.log(useParams());
 
   useEffect(() => {
     window.addEventListener("resize", () => {
       setWidth(window.innerWidth);
-      console.log(Width);
     });
   });
   return (
     <header>
       <div className="logo">
         <Link to="/">
-          {/* <img src="/images/guitarLogo.svg" alt="logo" /> */}
-          <h5>M pro</h5>
+          <h5>DUCER</h5>
         </Link>
       </div>
 
       <ul className={!Burger ? "nav-list" : "ul"}>
         <li>
-          <Link to="/">HOME</Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/artist">ARTIST</Link>
+          <Link to="/artist">Artist</Link>
         </li>
         <li>
-          <Link to="/album">ALBUM</Link>
+          <Link to="/album">Album</Link>
         </li>
         <li>
-          <Link to="/contact"> CONTACT</Link>
+          <Link to="/contact"> Contact</Link>
         </li>
         <li className="Login">
           <Link className="login" to="/login">
-            LOGIN
+            Login
           </Link>
         </li>
       </ul>
