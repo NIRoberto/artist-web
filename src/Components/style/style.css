@@ -1,0 +1,188 @@
+:root {
+  --main-color: #f60038;
+  --main-radius: 5px;
+  --text-color: #827e7e;
+  --black-bg: #101010;
+}
+/* Nav bar  */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 75px;
+  z-index: 19999;
+  position: absolute;
+}
+
+header .logo a {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.9em;
+  padding-left: 3em;
+  flex-direction: row;
+}
+header .logo a h5 {
+  padding-top: 10px;
+  font-family: "Gorditas", cursive;
+  font-size: 1.9em;
+  color: red;
+}
+header .logo img {
+  height: 2.9em;
+}
+header .humBurger-btn {
+  display: none;
+  padding-top: 1.4em;
+  margin-right: 3em;
+}
+header .humBurger-btn i {
+  font-size: 2em;
+  color: red;
+}
+header ul {
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin-right: 9em;
+}
+header ul li {
+  text-decoration: none;
+  color: #101010;
+  margin-left: 2em;
+}
+a:-webkit-any-link {
+  color: black;
+  font-size: 0.7em;
+  font-weight: 300;
+  cursor: pointer;
+  text-decoration: none;
+}
+a:-webkit-any-link:hover {
+  color: red;
+  transition: 1s;
+}
+header ul li .login {
+  color: white;
+  background-color: var(--main-color);
+  padding: 5px 10px;
+}
+header ul li .login:hover {
+  background-color: white;
+  padding: 5px 10px;
+  transition: 1s;
+}
+
+@media (max-width: 760px) {
+  header {
+    width: 100%;
+    position: relative;
+  }
+
+  header ul {
+    width: 100%;
+    position: absolute;
+    top: 76px;
+    display: none;
+    flex-direction: column;
+    background-color: var(--black-bg);
+    padding: 2em 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition: 1s;
+    animation: Navigation;
+    animation-duration: 2s;
+  }
+  @keyframes Navigation {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  header .nav-list {
+    display: flex;
+    animation: navigation;
+    animation-duration: 2s;
+  }
+  @keyframes navigation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  header ul li {
+    margin-top: 1em;
+    margin-left: 1.1em;
+  }
+  header ul li.Login {
+    margin-top: 1em;
+    margin-left: 1em;
+  }
+  a:-webkit-any-link {
+    color: white;
+  }
+  header .humBurger-btn {
+    display: flex;
+  }
+}
+/* sub nav */
+
+.subNav {
+  border: 1px solid red;
+}
+
+.subNav img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+}
+.subNav .text {
+  position: absolute;
+  width: 50%;
+  top: 30%;
+  display: flex;
+  flex-direction: column;
+  left: 2%;
+}
+.subNav .text span {
+  color: black;
+  font-size: 0.3em;
+  padding-left: 3px;
+}
+.subNav .text strong {
+  font-size: 1em;
+  color: white;
+}
+.subNav .text {
+  font-size: 3em;
+  color: var(--main-color);
+}
+
+.artistLineUp {
+  position: relative;
+  top: 100vh;
+  background: #ffff;
+  height: 100vh;
+}
+
+.release {
+  position: relative;
+  top: 100vh;
+  background-color: var(--black-bg);
+  height: 100vh;
+}
+.trendAlbum {
+  position: relative;
+  top: 100vh;
+  height: 100vh;
+}
