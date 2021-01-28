@@ -759,6 +759,11 @@ Contact info
   width: 50%;
   border: none;
 }
+@media (max-width: 760px) {
+  .contact section {
+    flex-direction: column;
+  }
+}
 /* Album */
 
 .album {
