@@ -1,12 +1,12 @@
 import React from "react";
+import RegisterForm from "../Components/Form/Register";
 import NavBar from "../Components/NavBar";
-import SubNav from "../Components/SubNav";
 
 const Register = () => {
   return (
     <div>
       <NavBar />
-      <SubNav />
+      <RegisterForm />
     </div>
   );
 };

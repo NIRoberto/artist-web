@@ -6,6 +6,7 @@ import Artist from "./Pages/Artist";
 import Contact from "./Pages/Contact";
 import Login from "./Pages/Login";
 import ErrorPage from "./Pages/ErrorPage";
+import Register from "./Pages/Register";
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
         </Route>
         <Route path="/login">
           <Login />
+        </Route>
+        <Route path="/register">
+          <Register />
         </Route>
         <Route path="*">
           <ErrorPage />

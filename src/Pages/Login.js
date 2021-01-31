@@ -1,12 +1,12 @@
 import React from "react";
 import NavBar from "../Components/NavBar";
-import SubNav from "../Components/SubNav";
+import LoginForm from "../Components/Form/LoginForm";
 
 const Login = () => {
   return (
     <div>
       <NavBar />
-      <SubNav />
+      <LoginForm />
     </div>
   );
 };

@@ -6,6 +6,9 @@
 }
 /* Nav bar  */
 
+body {
+  overflow-x: hidden;
+}
 header {
   display: flex;
   justify-content: space-between;
@@ -56,7 +59,7 @@ header ul li {
 a:-webkit-any-link {
   color: black;
   font-size: 0.7em;
-  font-weight: 300;
+  font-weight: 500;
   cursor: pointer;
   text-decoration: none;
 }
@@ -67,6 +70,7 @@ a:-webkit-any-link:hover {
 header ul li .login {
   color: white;
   background-color: var(--main-color);
+  border-radius: 5px;
   padding: 5px 10px;
 }
 header ul li .login:hover {
@@ -134,17 +138,10 @@ header ul li .login:hover {
 }
 /* sub nav */
 
-.subNav {
-  border: 1px solid red;
-}
-
 .subNav img {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  position: absolute;
-  top: 0;
-  height: 100vh;
 }
 .subNav .text {
   position: absolute;
@@ -167,22 +164,716 @@ header ul li .login:hover {
   font-size: 3em;
   color: var(--main-color);
 }
+/* artist lineup */
 
 .artistLineUp {
-  position: relative;
-  top: 100vh;
   background: #ffff;
-  height: 100vh;
+  margin-top: 4em;
+  margin-bottom: 4em;
 }
 
-.release {
+.artistLineUp h1 {
+  color: var(--main-color);
+  text-align: center;
   position: relative;
-  top: 100vh;
-  background-color: var(--black-bg);
-  height: 100vh;
+  font-size: 1.6em;
 }
+
+.artistLineUp h1::after {
+  width: 7%;
+  top: 1.4em;
+  left: 46.5%;
+  background-color: var(--main-color);
+  height: 2px;
+  align-items: center;
+  position: absolute;
+  content: "";
+}
+.artistLineUp .artistCard {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  margin-top: 2em;
+  margin-left: 3em;
+}
+
+.artistLineUp .artistCard .card {
+  flex-basis: 20%;
+  position: relative;
+  transition: 0.5s ease-in;
+  height: 300px;
+  width: 280px;
+  margin-top: 2em;
+  margin-left: 2em;
+}
+.artistLineUp .artistCard .card:hover {
+  transform: translateY(2%);
+  transition: 0.5s ease-in;
+}
+.artistLineUp .artistCard .card::before {
+  content: "";
+  transition: 0.5s all;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: red;
+  display: block;
+  z-index: 2;
+  opacity: 0;
+}
+.artistLineUp .artistCard .card:hover::before {
+  opacity: 0.5;
+}
+
+.artistLineUp .artistCard .card img {
+  width: 100%;
+  height: 100%;
+}
+.artistLineUp .artistCard .card .info {
+  transform: translateY(-90px);
+  padding-left: 2em;
+  color: white;
+  position: relative;
+  opacity: 0;
+}
+.artistLineUp .artistCard .card .info .social {
+  display: flex;
+}
+.artistLineUp .artistCard .card .info .social a {
+  margin-right: 7px;
+  cursor: pointer;
+  color: white;
+  font-size: 0.8em;
+  margin-bottom: 0.3em;
+}
+.artistLineUp .artistCard .card .info .social a:hover {
+  margin-right: 5px;
+  cursor: pointer;
+  color: black;
+  margin-bottom: 0.3em;
+}
+
+.artistLineUp .artistCard .card:hover .info {
+  opacity: 1;
+  z-index: 3;
+}
+.artistLineUp .artistCard .card .info .profile {
+  margin-top: 0.5em;
+}
+.artistLineUp .artistCard .card .info .profile a {
+  background-color: white;
+  color: red;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.artistLineUp .artistCard .card .info .profile a:hover {
+  background-color: var(--black-bg);
+  color: white;
+  transition: 0.5s ease-in-out;
+}
+@media (max-width: 600px) {
+  .artistLineUp .artistCard .card {
+    flex-basis: 100%;
+  }
+  .artistLineUp .artistCard {
+    margin-left: 0em;
+    margin-right: 1.3em;
+  }
+}
+
+@media (min-width: 600px) {
+  .artistLineUp .artistCard .card {
+    flex-basis: 40%;
+  }
+}
+
+@media (min-width: 960px) {
+  .artistLineUp .artistCard .card {
+    flex-basis: 20%;
+  }
+}
+
+/* Trending release album */
+
+.release {
+  background-color: var(--black-bg);
+  height: 70vh;
+  padding-top: 1px;
+}
+
+.release h1 {
+  color: var(--main-color);
+  text-align: center;
+  position: relative;
+  margin: 1em 0 !important;
+
+  font-size: 1.6em;
+}
+
+.release h1::after {
+  content: "";
+  width: 7%;
+  top: 1.4em;
+  left: 46.5%;
+  background-color: var(--main-color);
+  height: 2px;
+  align-items: center;
+  position: absolute;
+}
+.release .album-info {
+  display: flex;
+  padding: 1em 0 !important;
+}
+.release .album-info .view-video {
+  flex-basis: 35%;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.release .album-info .view-video h3 {
+  color: var(--main-color);
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.release .album-info .infos {
+  display: flex;
+  flex-basis: 60%;
+  padding-left: 2em;
+  margin: 1em;
+}
+.release .album-info .infos .img {
+  flex-basis: 20%;
+}
+.release .album-info .infos .img img {
+  width: 95%;
+  height: 80%;
+}
+
+.release .album-info .album-text {
+  flex-basis: 60%;
+  margin-left: 1em;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.release .album-info .album-text .title {
+  color: white;
+}
+.release .album-info .album-text .text {
+  color: var(--text-color);
+  font-size: 12px;
+  width: 100%;
+  margin-top: 1em;
+  line-height: 1.5em;
+}
+
+/* Trending album  released */
 .trendAlbum {
   position: relative;
-  top: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 2em 0;
+}
+.trendAlbum h1 {
+  color: var(--main-color);
+  text-align: center;
+  position: relative;
+  margin: 1em 0 !important;
+
+  font-size: 1.6em;
+}
+
+.trendAlbum h1::after {
+  content: "";
+  width: 40%;
+  top: 1.6em;
+  left: 34%;
+  background-color: var(--main-color);
+  height: 2px;
+  align-items: center;
+  position: absolute;
+}
+.trendAlbum .upcoming-album {
+  display: flex;
+  /* border: 1px solid red; */
+
+  width: 80%;
+  align-items: center;
+  justify-content: space-between;
+}
+.trendAlbum .upcoming-album:hover {
+  border: 4px solid var(--main-color);
+  border-radius: 5px;
+}
+.trendAlbum .upcoming-album:hover .main-sec2 .main-title h2 {
+  color: var(--main-color);
+}
+.trendAlbum .upcoming-album .main-sec1 {
+  flex-basis: 20%;
+  position: relative;
+
+  padding: 2em;
+}
+
+.trendAlbum .upcoming-album .main-sec1 .date {
+  color: var(--main-color);
+  font-size: 1.5em;
+}
+.trendAlbum .upcoming-album .main-sec1 .sub-date {
+  font-size: 0.9em;
+}
+.trendAlbum .upcoming-album .main-sec1::after {
+  width: 2px;
+  background-color: var(--main-color);
+  height: 4em;
+  content: "";
+  position: absolute;
+  top: 2em;
+  right: 0;
+}
+
+.trendAlbum .upcoming-album .main-sec2 {
+  flex-basis: 60%;
+  padding: 1em;
+  /* border: 1px solid red; */
+}
+.trendAlbum .upcoming-album .main-sec2 .main-title h2 {
+  font-weight: 400;
+  font-size: 1.2em;
+}
+.trendAlbum .upcoming-album .main-sec2 .desc p {
+  font-weight: 300;
+  font-size: 0.8em;
+}
+.trendAlbum .upcoming-album .main-sec3 {
+  flex-basis: 20%;
+  padding: 1em;
+  /* border: 1px solid red; */
+}
+.trendAlbum .upcoming-album .main-sec3 button {
+  border: 1px solid #101010;
+  background-color: white;
+  padding: 5px 10px;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.trendAlbum .upcoming-album .main-sec3 button:hover {
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+}
+
+/* Spotlight  */
+.spotLight {
+  background-color: var(--main-color);
+  background-size: cover;
+}
+.spotLight h1 {
+  color: white;
+  text-align: center;
+  position: relative;
+  padding: 1em 0;
+  font-size: 1.6em;
+}
+
+.spotLight h1::after {
+  content: "";
+  width: 6%;
+  top: 2.6em;
+  left: 47%;
+  background-color: white;
+  height: 2px;
+  align-items: center;
+  position: absolute;
+}
+.spotLight .spot-section {
+  display: flex;
+  padding: 4em 0;
+}
+.spotLight .spot-section .video {
+  flex-basis: 50%;
+  padding: 1em;
+}
+.spotLight .spot-section .subscribe-form {
+  display: flex;
+  flex-basis: 50%;
+  margin: 0 3em;
+  width: 50%;
+  padding: 1.5em;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.spotLight .spot-section .subscribe-form h2 {
+  color: white;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+.spotLight .spot-section .subscribe-form span {
+  width: 70%;
+  font-size: 0.6em;
+  color: white;
+  margin-bottom: 1em;
+}
+
+.spotLight .spot-section form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.spotLight .spot-section form input {
+  outline: none;
+  border: 1px solid red;
+  border-radius: 5px;
+  padding: 7px 14px;
+
+  margin-bottom: 1em;
+}
+.spotLight .spot-section form button {
+  outline: none;
+  padding: 5px 10px;
+  background-color: white;
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+
+  border-radius: 5px;
+}
+::placeholder {
+  color: var(--text-color);
+  font-size: 0.7em;
+}
+.spotLight .spot-section form button:hover {
+  background-color: var(--main-color);
+  transition: 0.5s ease-in;
+  border: 1px solid white;
+  color: white;
+}
+/* Footer  */
+footer {
+  background-color: var(--black-bg);
+}
+.footer {
+  background-color: #101010;
+  color: var(--text-color);
+  display: flex;
+  padding: 3em 1em;
+}
+
+footer.main {
+  flex-basis: 40%;
+}
+footer .main .logo {
+  color: var(--main-color);
+  font-size: 2em;
+  font-family: "Gorditas", cursive;
+  padding-bottom: 0.5em;
+}
+footer .main .text {
+  width: 50%;
+  font-size: 0.8em;
+  line-height: 1.5em;
+}
+
+.footer .second {
+  flex-basis: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.footer .second h1 {
+  color: var(--main-color);
+}
+.footer .second ul li a {
+  color: var(--text-color);
+}
+.footer .second ul li a:hover {
+  color: var(--main-color);
+}
+.footer .third {
+  flex-basis: 30%;
+}
+.footer .third h2 {
+  color: var(--main-color);
+}
+.footer .third .list ol {
+  display: flex;
+  padding-bottom: 2em;
+  justify-content: space-around;
+  width: 20%;
+}
+.footer .third .list ol li a {
+  color: var(--text-color);
+  font-size: 0.7em;
+  margin-left: 1em;
+}
+.footer .third .list ol li a:hover {
+  color: var(--main-color);
+}
+.footer ul,
+ol {
+  list-style-type: none;
+}
+footer {
+  color: var(--text-color);
+}
+footer .developer {
+  text-align: center;
+  padding: 1em;
+  font-size: 0.7em;
+}
+
+/* login form  */
+.loginForm {
+  color: red;
+}
+.loginForm img {
+  position: relative;
+  background-size: cover;
+  width: 100%;
   height: 100vh;
+}
+.loginForm .loginForm-input {
+  position: absolute;
+  background-color: white;
+  padding: 2em;
+  top: 20%;
+  border-radius: 5px;
+  left: 40%;
+  display: flex;
+}
+.loginForm .loginForm-input .input-div {
+  display: flex;
+  flex-direction: column;
+}
+.loginForm .loginForm-input form {
+  width: 20em;
+}
+.loginForm .loginForm-input .input-div label {
+  margin: 0.5em 0;
+}
+
+.loginForm .loginForm-input .input-div input {
+  padding: 4px 0;
+  border: 1px solid var(--main-color);
+  margin: 0.5em 0;
+  border-radius: 5px;
+  outline: none;
+  padding: 5px 10px;
+}
+.loginForm .loginForm-input .input-div input[type="password"] {
+  margin-bottom: 0.5em;
+}
+.loginForm .loginForm-input button {
+  width: 100%;
+  background-color: var(--main-color);
+  color: white;
+  outline: none;
+  border-radius: 5px;
+  margin-top: 0.5em;
+  border: none;
+  padding: 5px 10px;
+  transition: 0.5s;
+}
+.loginForm .loginForm-input button:hover {
+  background-color: rgb(182, 11, 11);
+  transition: 0.5s;
+}
+/* 
+
+Contact info
+*/
+
+.contact {
+  margin: 4em 0;
+}
+
+.contact section {
+  display: flex;
+  height: 100vh;
+
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.contact section article {
+  flex-basis: 32%;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+  height: 300px;
+  margin: 2em 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text-color);
+}
+.contact section article img {
+  width: 1em;
+  color: var(--text-color);
+}
+.contact section .two {
+  background-color: #101010;
+  color: var(--text-color);
+}
+.contact form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 60vh;
+}
+.contact form textarea {
+  width: 50%;
+  border-radius: 5px;
+  height: 10em;
+  padding: 5px 10px;
+  margin: 1em 0;
+
+  outline: none;
+}
+.contact form .input {
+  display: grid;
+  grid-template-columns: repeat(2, 50% 52.7%);
+  width: 50%;
+}
+.contact form .input input {
+  width: 95%;
+  padding: 5px 10px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid var(--black-bg);
+}
+.contact form button {
+  background-color: red;
+  color: white;
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: 50%;
+  border: none;
+}
+/* Album */
+
+.album {
+  display: flex;
+  flex-direction: column;
+  margin: 4em 0;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+.album .select {
+  display: flex;
+}
+.album .select .type1 button {
+  background-color: var(--main-color);
+  color: #fff;
+  outline: none;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.album .albumCard {
+  display: flex;
+}
+.album .albumCard .card {
+  margin: 2em 2em;
+  height: 300px;
+}
+.album .albumCard .card:hover {
+  transform: translateY(2%);
+  transition: 0.5s ease-in;
+}
+.album .albumCard .card::before {
+  content: "";
+  transition: 0.5s all;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: red;
+  display: block;
+  z-index: 2;
+  opacity: 0;
+}
+.album .albumCard .card:hover::before {
+  opacity: 0.5;
+}
+
+.album .albumCard .card img {
+  width: 100%;
+  height: 100%;
+}
+.album .albumCard .card .info {
+  transform: translateY(-90px);
+  padding-left: 2em;
+  color: white;
+  position: relative;
+  opacity: 0;
+}
+.album .albumCard .card .info .social {
+  display: flex;
+}
+.album .albumCard .card .info .social a {
+  margin-right: 7px;
+  cursor: pointer;
+  color: white;
+  font-size: 0.8em;
+  margin-bottom: 0.3em;
+}
+.album .albumCard .card .info .social a:hover {
+  margin-right: 5px;
+  cursor: pointer;
+  color: black;
+  margin-bottom: 0.3em;
+}
+
+.album .albumCard .card:hover .info {
+  opacity: 1;
+  z-index: 3;
+}
+.album .albumCard .card .info .profile {
+  margin-top: 0.5em;
+}
+.album .albumCard .card .info .profile a {
+  background-color: white;
+  color: red;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.album .albumCard .card .info .profile a:hover {
+  background-color: var(--black-bg);
+  color: white;
+  transition: 0.5s ease-in-out;
+}
+@media (max-width: 600px) {
+  .album .albumCard .card {
+    flex-basis: 100%;
+  }
+  .album .albumCard {
+    margin-left: 0em;
+    margin-right: 1.3em;
+  }
+}
+
+@media (min-width: 600px) {
+  .album .albumCard .card {
+    flex-basis: 40%;
+  }
+}
+
+@media (min-width: 960px) {
+  .album .albumCard .card {
+    flex-basis: 20%;
+  }
 }
