@@ -2,13 +2,19 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../style/style.css";
 
-const LoginForm = () => {
+const LoginForm = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [focus1, setFocus1] = useState(false);
-  const [focus2, setFocus2] = useState(false);
 
-  const handleSubmit = () => {};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (email.trim() && password.trim()) {
+      alert("ok");
+    } else {
+      alert("wrong");
+    }
+  };
   return (
     <div className="loginForm">
       <img src="/images/guitar.png" alt="Background" />
@@ -21,7 +27,6 @@ const LoginForm = () => {
             <label htmlFor="Email">Email</label>
             <input
               type="email"
-              onClick={() => setFocus1(!focus1)}
               name="Email"
               onChange={(e) => setEmail(e.target.value)}
               value={email}
@@ -33,7 +38,6 @@ const LoginForm = () => {
             <input
               type="password"
               name="Password"
-              onClick={() => setFocus2(!focus2)}
               onChange={(e) => setPassword(e.target.value)}
               value={password}
             />

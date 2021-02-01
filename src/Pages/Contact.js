@@ -1,8 +1,8 @@
 import React from "react";
 import ContactPage from "../Components/contact/contact";
+import SubNav from "../Components/contact/SubNav";
 import Footer from "../Components/Footer";
 import NavBar from "../Components/NavBar";
-import SubNav from "../Components/SubNav";
 
 const Contact = () => {
   return (
