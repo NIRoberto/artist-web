@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./style/style.css";
 
 const NavBar = () => {
   const [Burger, setBurger] = useState(false);
   const [Width, setWidth] = useState(window.innerWidth);
-  console.log(useParams());
 
   useEffect(() => {
     window.addEventListener("resize", () => {

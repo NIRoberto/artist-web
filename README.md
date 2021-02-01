@@ -1,4 +1,4 @@
-# Artist website for wrestles names
+# This the artist portfolio website
 
 This web is the web that make easily for the artist to publish there songs easily, share their ideas to other upcomming artist to learn from theme, also be easily earn money, get hired in different label easily and so far.
 
