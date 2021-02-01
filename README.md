@@ -37,8 +37,8 @@ Run the server
 
 ## this app is hosted on netlify
 
-- The website can be found [here](www.diusa.com)
+- The website can be found [here](https://diusa-artist.netlify.app/)
 
 ## Author
 
-**Robert Niyitanga**
+- **Robert Niyitanga**
