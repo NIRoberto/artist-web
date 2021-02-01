@@ -8,7 +8,6 @@ const TrendingAlbum = () => {
       <h1>Upcoming album</h1>
       {trendAlbum.map((Desc) => {
         const { id, title, desc, dateNumber, date } = Desc;
-        console.log(dateNumber);
         return (
           <div key={id} className="upcoming-album">
             <div className="main-sec1">

@@ -164,6 +164,13 @@ header ul li .login:hover {
   font-size: 3em;
   color: var(--main-color);
 }
+@media (max-width: 760px) {
+  .subNav .text {
+    width: 100%;
+    font-size: 2.5em;
+    top: 20%;
+  }
+}
 /* artist lineup */
 
 .artistLineUp {
@@ -300,7 +307,6 @@ header ul li .login:hover {
 
 .release {
   background-color: var(--black-bg);
-  height: 70vh;
   padding-top: 1px;
 }
 
@@ -372,6 +378,11 @@ header ul li .login:hover {
   margin-top: 1em;
   line-height: 1.5em;
 }
+@media (max-width: 760px) {
+  .release .album-info {
+    flex-direction: column;
+  }
+}
 
 /* Trending album  released */
 .trendAlbum {
@@ -419,7 +430,6 @@ header ul li .login:hover {
 .trendAlbum .upcoming-album .main-sec1 {
   flex-basis: 20%;
   position: relative;
-
   padding: 2em;
 }
 
@@ -443,7 +453,6 @@ header ul li .login:hover {
 .trendAlbum .upcoming-album .main-sec2 {
   flex-basis: 60%;
   padding: 1em;
-  /* border: 1px solid red; */
 }
 .trendAlbum .upcoming-album .main-sec2 .main-title h2 {
   font-weight: 400;
@@ -470,6 +479,46 @@ header ul li .login:hover {
   background-color: var(--main-color);
   color: white;
   border: none;
+}
+@media (max-width: 760px) {
+  .trendAlbum .upcoming-album {
+    width: 100%;
+  }
+
+  .trendAlbum .upcoming-album .main-sec1 {
+    flex-basis: 20%;
+  }
+
+  .trendAlbum .upcoming-album .main-sec1 .date {
+    font-size: 1.2em;
+  }
+  .trendAlbum .upcoming-album .main-sec1 .sub-date {
+    font-size: 0.6em;
+  }
+  .trendAlbum .upcoming-album .main-sec1::after {
+    height: 4em;
+    top: 1.5em;
+  }
+  .trendAlbum .upcoming-album .main-sec2 {
+    flex-basis: 60%;
+    padding: 0.5em;
+  }
+  .trendAlbum .upcoming-album .main-sec2 {
+    flex-basis: 100%;
+    padding: 1em;
+  }
+  .trendAlbum .upcoming-album .main-sec2 .main-title h2 {
+    font-size: 0.8em;
+  }
+  .trendAlbum .upcoming-album .main-sec2 .desc p {
+    font-size: 0.6em;
+  }
+  .trendAlbum .upcoming-album .main-sec3 {
+    padding: 1em;
+  }
+  .trendAlbum .upcoming-album .main-sec3 button {
+    padding: 3px 6px;
+  }
 }
 
 /* Spotlight  */
@@ -557,6 +606,15 @@ header ul li .login:hover {
   border: 1px solid white;
   color: white;
 }
+
+@media (max-width: 760px) {
+  .spotLight .spot-section {
+    flex-direction: column;
+  }
+  .spotLight .spot-section .subscribe-form {
+    width: 100%;
+  }
+}
 /* Footer  */
 footer {
   background-color: var(--black-bg);
@@ -629,7 +687,11 @@ footer .developer {
   padding: 1em;
   font-size: 0.7em;
 }
-
+@media (max-width: 760px) {
+  .footer {
+    flex-direction: column;
+  }
+}
 /* login form  */
 .loginForm {
   color: red;
@@ -759,6 +821,12 @@ Contact info
   width: 50%;
   border: none;
 }
+@media (max-width: 760px) {
+  .contact section {
+    flex-direction: column;
+  }
+}
+
 /* Album */
 
 .album {
