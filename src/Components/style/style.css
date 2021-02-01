@@ -170,10 +170,6 @@ header ul li .login:hover {
     font-size: 2.5em;
     top: 20%;
   }
-  .subNav img {
-    height: 60vh;
-    width: 100%;
-  }
 }
 /* artist lineup */
 
@@ -386,18 +382,6 @@ header ul li .login:hover {
   .release .album-info {
     flex-direction: column;
   }
-  .release .album-info .infos .img {
-    flex-basis: 40%;
-  }
-  .release .album-info .infos .img img {
-    width: 100%;
-    height: 100%;
-  }
-  .release .album-info .infos {
-    flex-basis: 100%;
-    padding-left: 0em;
-    margin: 1em;
-  }
 }
 
 /* Trending album  released */
@@ -430,6 +414,7 @@ header ul li .login:hover {
 }
 .trendAlbum .upcoming-album {
   display: flex;
+  /* border: 1px solid red; */
 
   width: 80%;
   align-items: center;
@@ -707,8 +692,6 @@ footer .developer {
     flex-direction: column;
   }
 }
-
-/*  login and register pages  */
 /* login form  */
 .loginForm {
   color: red;
@@ -765,9 +748,6 @@ footer .developer {
   background-color: rgb(182, 11, 11);
   transition: 0.5s;
 }
-/* ****************************End of login and register pages******************* */
-
-/* **************** contact page************************ */
 /* 
 
 Contact info
@@ -847,22 +827,8 @@ Contact info
   }
 }
 
-/* ****************************end of contact page********************* */
-
 /* Album */
-.Album-sub-header {
-  width: 100%;
-}
-.Album-sub-header img {
-  width: 100%;
-  background-repeat: no-repeat;
-  position: relative;
-  height: 100vh;
-}
-.Album-sub-header .content {
-  position: absolute;
-  top: 20%;
-}
+
 .album {
   display: flex;
   flex-direction: column;
@@ -871,7 +837,6 @@ Contact info
   justify-content: center;
   align-items: center;
 }
-
 .album .select {
   display: flex;
 }
@@ -941,7 +906,6 @@ Contact info
   color: white;
   transition: 0.5s ease-in-out;
 }
-
 @media (max-width: 600px) {
   .album .albumCard .card {
     flex-basis: 100%;
