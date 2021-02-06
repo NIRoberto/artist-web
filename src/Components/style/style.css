@@ -886,24 +886,6 @@ Contact info
   transform: translateY(-90px);
   padding-left: 2em;
   color: white;
-  position: relative;
-  opacity: 0;
-}
-.album .albumCard .card .info .social {
-  display: flex;
-}
-.album .albumCard .card .info .social a {
-  margin-right: 7px;
-  cursor: pointer;
-  color: white;
-  font-size: 0.8em;
-  margin-bottom: 0.3em;
-}
-.album .albumCard .card .info .social a:hover {
-  margin-right: 5px;
-  cursor: pointer;
-  color: black;
-  margin-bottom: 0.3em;
 }
 
 .album .albumCard .card:hover .info {
@@ -943,5 +925,32 @@ Contact info
 @media (min-width: 960px) {
   .album .albumCard .card {
     flex-basis: 20%;
+  }
+}
+
+/* sub header */
+
+.Album-sub-header .img {
+  height: 100vh;
+}
+
+.Album-sub-header .img img {
+  width: 100%;
+  background-size: cover;
+}
+.Album-sub-header .content {
+  position: absolute;
+  left: 47%;
+  top: 40%;
+}
+.Album-sub-header .content .content1 h2 {
+  color: white;
+  transform: translateX(-22%);
+}
+
+@media (max-width: 760px) {
+  .Album-sub-header .content {
+    left: 40%;
+    top: 20%;
   }
 }
