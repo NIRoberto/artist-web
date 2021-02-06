@@ -6,7 +6,10 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.2",
+<<<<<<< HEAD
     "axios": "^0.21.1",
+=======
+>>>>>>> 7ba360d7092188f2a2cbcb59150f495e09548154
     "postcss": "^8.2.4",
     "postcss-cli-simple": "^3.1.0",
     "react": "^17.0.1",
@@ -16,7 +19,10 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "redux": "^4.0.5",
+<<<<<<< HEAD
     "redux-thunk": "^2.3.0",
+=======
+>>>>>>> 7ba360d7092188f2a2cbcb59150f495e09548154
     "tailwindcss": "^2.0.2",
     "web-vitals": "^0.2.4"
   },

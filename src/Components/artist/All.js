@@ -3,7 +3,11 @@ import React from "react";
 const All = () => {
   return (
     <div className="flex flex-col">
+<<<<<<< HEAD
       <div className="w-auto flex flex-row h-full  m-8 border-red-500 ">
+=======
+      <div className="w-auto flex flex-row h-full  m-8 border-red-500 shadow-lg hover:shadow-2xl  ">
+>>>>>>> 7ba360d7092188f2a2cbcb59150f495e09548154
         <div className="h-4/5 p-8 ">
           <h1 className="text-red-600 font-bold text-lg ">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
